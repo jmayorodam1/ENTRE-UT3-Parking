@@ -6,7 +6,7 @@
  * cerca del parking, aparcan un nº elevado de horas y se benefician de esta 
  * tarifa más económica
  * (leer enunciado)
- * 
+ * Javier Mayor
  */
 public class Parking
 {
@@ -16,26 +16,27 @@ public class Parking
      * El resto de atributos se inicializan a 0 
      */
     public Parking() {
+        
 
        
 
     }
 
-    /**
-     * accesor para el nombre del parking
-     *  
-     */
-    public          () {
+    // /**
+     // * accesor para el nombre del parking
+     // *  
+     // */
+    // public          () {
          
-    }
+    // }
     
-    /**
-     * mutador para el nombre del parking
-     *  
-     */
-    public  () {
+    // /**
+     // * mutador para el nombre del parking
+     // *  
+     // */
+    // public  () {
         
-    }
+    // }
 
     /**
      *  Recibe cuatro parámetros que supondremos correctos:
@@ -68,6 +69,7 @@ public class Parking
      *  
      */
     public void printEstadísticas() {
+        System.out.println (Estadisticas);
          
     }
 
@@ -75,10 +77,10 @@ public class Parking
      *  Calcula y devuelve un String que representa el nombre del día
      *  en el que más clientes han utilizado el parking - "SÁBADO"   "DOMINGO" o  "LUNES"
      */
-    public        diaMayorNumeroClientes() {
+    // public        diaMayorNumeroClientes() {
 
         
 
     }
 
-}
+

@@ -114,8 +114,8 @@ public class Parking
     }
 
     /**
-     *  Recibe cuatro parámetros que supondremos correctos:
-     *    tipoTarifa - un carácter 'R' o 'C'
+     *  Recibe cuatro parámetros que supondremos correctos: 
+     *    tipoTarifa - un carácter 'R' o 'C
      *    entrada - hora de entrada al parking
      *    salida – hora de salida del parking
      *    dia – nº de día de la semana (un valor entre 1 y 7)

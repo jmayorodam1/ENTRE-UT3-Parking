@@ -9,34 +9,104 @@
  * Javier Mayor
  */
 public class Parking
+
 {
-    
+    private String nombreParking;
+    private String Regular;
+    private String Comercial;
+    private int HoraLlegada;
+    private int HoraSalida;
+    private int NumeroCliente;
+    private String Tarifa;
+    private double Importe;
+    private int dia;
     /**
      * Inicializa el parking con el nombre indicada por el parámetro.
      * El resto de atributos se inicializan a 0 
      */
     public Parking() {
+       
+        HoraLlegada = 0;
+        HoraSalida = 0;
+        NumeroCliente = 0;
+        Tarifa = "";
+        Importe = 0;
+        nombreParking = "";
+        
+        
         
 
        
 
     }
 
-    // /**
-     // * accesor para el nombre del parking
-     // *  
-     // */
-    // public          () {
+    /**
+     * accesor para el nombre del parking
+     *  
+     */
+    public String getNombreParking() {
+        return nombreParking;
          
-    // }
+    }
     
-    // /**
-     // * mutador para el nombre del parking
-     // *  
-     // */
-    // public  () {
+    /**
+     * mutador para el nombre del parking
+     *  
+     */
+    public void nombreParking (String queNombreParking) {
+        nombreParking = queNombreParking;
         
-    // }
+        
+    }
+
+    /**
+     * mutador de entrada
+     *
+     * 
+     */
+    public void entrada(int queHoraLlegada)
+    {
+        HoraLlegada = queHoraLlegada;
+        
+    }
+
+    /**
+     * Mutador de salida
+   
+     */
+    public void salida(int queHoraSalida)
+    {
+        HoraSalida = queHoraSalida; 
+        
+    }
+
+    /**
+     * Si es comercial o Regular
+     *
+   
+     */
+    public void Tarifa(String queTarifa){
+        Tarifa = queTarifa;
+        Regular = "R";
+        Comercial = "C";
+       
+    }
+
+    /**
+     * Dia de entrada
+     *
+    
+     */
+    public void dia(int queDia)
+    {
+        dia = queDia;
+        
+    }
+
+
+
+
+    
 
     /**
      *  Recibe cuatro parámetros que supondremos correctos:
@@ -54,22 +124,40 @@ public class Parking
      *    
      *    (leer enunciado del ejercicio)
      */
-    public void facturarCliente(char tipoTarifa, int entrada, int salida, int dia) {
+    public void facturarCliente(char tipoTarifa, int llegada, int salida, int dia) {
+        if (llegada){
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         
        
 
         
 
     }
+    
 
     /**
-     * Muestra en pantalla las estadísticcas sobre el parking  
+     * Muestra en pantalla https://github.com/jmayorodam1/ENTRE-UT3-Parking.gitlas estadísticcas sobre el parking  
      *   
      * (leer enunciado)
      *  
      */
     public void printEstadísticas() {
-        System.out.println (Estadisticas);
+        
+        // System.out.println ("Importe total entre todos los clientes" + importeTotal  +  
+        // "\nNº clientes tarifa regular" + numeroTarifaRegular  +
+         // // "
+         // \nNºclientes tarifa comercial" + numeroTarifaComercial + 
+         // "\nCliente tarifa COMERCIAL con factura maxima fue el" xxx "y pago" xxx);
          
     }
 
@@ -77,10 +165,14 @@ public class Parking
      *  Calcula y devuelve un String que representa el nombre del día
      *  en el que más clientes han utilizado el parking - "SÁBADO"   "DOMINGO" o  "LUNES"
      */
-    // public        diaMayorNumeroClientes() {
+    // public String diaMayorNumeroClientes() {
+        
+        
+        
+        
 
         
 
-    }
+    // }
 
-
+}

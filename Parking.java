@@ -20,8 +20,12 @@ public class Parking
     private String Tarifa;
     private double Importe;
     private int dia;
-    private int hora;
+    private int horaTotal;
     private double tarifa;
+    private int numeroTarifaRegular;
+    private int numeroTarifaComercial;
+    private double tarifaTotal;
+    
     /**
      * Inicializa el parking con el nombre indicada por el parámetro.
      * El resto de atributos se inicializan a 0 
@@ -103,10 +107,9 @@ public class Parking
      *Tiempo en el parking
      * 
      */
-    public void hora(int queHora, int queHoraSalida ,int queHoraLlegada)
+    public void hora()
     {
-        hora = queHora;
-        queHora = queHoraSalida - queHoraLlegada;
+        horaTotal = HoraSalida - HoraLlegada;
 
     }
 
@@ -126,24 +129,24 @@ public class Parking
      *    
      *    (leer enunciado del ejercicio)
      */
-    public void facturarCliente( char tipoTarifa, int queHoraEntrada, int queHoraSalida, int dia, int queHora) {
-        if (tipoTarifa = "R") { 
-            if (queHora < 11){
-                tarifa = 2 + ((3*queHora)*2);
+    public void facturarCliente( char tipoTarifa, int queHoraEntrada, int queHoraSalida, int dia, int Hora) {
+        if (tipoTarifa = 'R') { 
+            if (Hora < 11){
+                tarifa = 2 + ((3*Hora)*2);
 
             }
-            if (queHora > 11){
-                tarifa = 2+ ((5*queHora)*2);
+            if (Hora > 11){
+                tarifa = 2+ ((5*Hora)*2);
 
             }
 
-            if (tipoTarifa = "C"){
-                if (queHora <= 3){
-                    tarifa = queHora *5;
+            if (tipoTarifa = 'C'){
+                if (Hora <= 3){
+                    tarifa = Hora *5;
 
                 }
-                if (queHora > 3){
-                    tarifa = (3*5) + (queHora*2) * 3; 
+                if (Hora > 3){
+                    tarifa = (3*5) + (Hora*2) * 3; 
 
                 }
 
@@ -152,27 +155,34 @@ public class Parking
         
        
         }
-        /**
-         * Muestra en pantalla https://github.com/jmayorodam1/ENTRE-UT3-Parking.gitlas estadísticcas sobre el parking  
-         *   
-         * (leer enunciado)
-         *  
-         */
-        private void printEstadísticas() {
+       
+        
 
-            System.out.println ("Importe total entre todos los clientes" + tarifa  +  
+    }
+
+    /**
+    * Muestra en pantalla https://github.com/jmayorodam1/ENTRE-UT3-Parking.gitlas estadísticcas sobre el parking  
+    *   
+    * (leer enunciado)
+     */
+    private void printEstadísticas()
+    {
+        System.out.println ("Importe total entre todos los clientes" + tarifaTotal  +  
                 "\nNº clientes tarifa regular" + numeroTarifaRegular  + 
                 "\nNºclientes tarifa comercial" + numeroTarifaComercial + 
                 "\nCliente tarifa COMERCIAL con factura maxima fue el" + "y pago");
-
-        }
-        /**
-         * 
-         *
-         *  Calcula y devuelve un String que representa el nombre del día
-         *  en el que más clientes han utilizado el parking - "SÁBADO"   "DOMINGO" o  "LUNES"
-         */
-        public String diaMayorNumeroClientes()
-
+        
     }
-   
+
+
+    /**
+     * 
+     *
+     * Calcula y devuelve un String que representa el nombre del día
+     *  en el que más clientes han utilizado el parking - "SÁBADO"   "DOMINGO" o  "LUNES"
+     */
+    public String diaMayorNumeroClientes(){
+        
+    }
+
+}
